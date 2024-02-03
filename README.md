@@ -20,4 +20,3 @@ Python django template project for simple API server.
 
 ## License
 Uses MIT license. Anyone can make changes, copy, or distribute their own versions with no problem.
->>>>>>> Stashed changes

@@ -1,0 +1,14 @@
+version: '3.11'
+services:
+  app:
+    build:
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    env_file:
+      - .envs/local_django_env
+    environment:
+      TEST_ENV: 'test_env'
+    command: python manage.py runserver 0.0.0.0:8000
