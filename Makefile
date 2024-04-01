@@ -10,8 +10,11 @@ build:
 	$(DOCKER_COMPOSE) build
 
 # # Run Django database migrations
-# migrate:
-# 	$(DOCKER_COMPOSE) run --rm web python manage.py migrate
+migrate:
+	$(DOCKER_COMPOSE) run --rm app python manage.py migrate
+
+makemigrations: 
+	$(DOCKER_COMPOSE) run --rm app python manage.py makemigrations
 
 # # Create a new Django superuser
 # createsuperuser:
